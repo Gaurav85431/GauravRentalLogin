@@ -1,6 +1,10 @@
 const express = require('express');
 const app = express();
 
+const cors = require("cors");
+const http = require("http");
+app.use(cors());
+
 const passwort = require('passport');
 const googleStrategy = require('passport-google-oauth20');
 passwort.use(new googleStrategy({
